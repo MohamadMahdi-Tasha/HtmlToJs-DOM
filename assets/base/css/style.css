@@ -8,6 +8,7 @@
     --purple: #533483;
     --blue: #0F3460;
     --dark-blue: #16213E;
+    --shadow: 12px 20px 0 rgb(0,0,0);
 }
 
 /*CSS RESET*/
@@ -24,3 +25,21 @@ body {
 }
 
 /*Style*/
+#js-input {user-select: all;}
+h1 {text-shadow: 5px 0 0 rgb(0,0,0)}
+textarea {
+    height: 25rem !important;
+    outline: none;
+    background-color: white;
+    border: 5px solid transparent;
+    box-shadow: var(--shadow);
+    transition: .3s;
+    resize: none !important;
+}
+
+/*Focus, Hover, Active*/
+textarea:focus {border-color: var(--purple);}
+
+@media (max-width: 575px) {
+    textarea {height: 10rem;}
+}
