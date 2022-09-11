@@ -40,7 +40,7 @@ button[type='submit'] {
     border: 2px solid var(--red);
 }
 
-textarea {
+textarea, #JS-input {
     height: 25rem !important;
     outline: none;
     background-color: white;
@@ -62,5 +62,6 @@ button[type='submit']:is(:hover, :active, :focus, :focus-within) {background-col
         position: static !important;
         width: 100%;
         transform: translateY(0) translateX(0);
+        border: none !important;
     }
 }
