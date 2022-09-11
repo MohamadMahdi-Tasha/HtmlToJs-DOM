@@ -1,0 +1,11 @@
+/*Codes By MAHDI Tasha*/
+/*Importing Poppins Font*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+/*Variables*/
+:root {
+    --red: #E94560;
+    --purple: #533483;
+    --blue: #0F3460;
+    --dark-blue: #16213E;
+}
