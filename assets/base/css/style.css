@@ -29,6 +29,17 @@ body {
 h1 {text-shadow: 5px 0 0 rgb(0,0,0)}
 textarea::-webkit-scrollbar {background-color: var(--dark-blue);border-radius: 50rem}
 textarea::-webkit-scrollbar-thumb {background-color: var(--purple);border-radius: 50rem}
+
+button[type='submit'] {
+    width: 50px;
+    height: 50px;
+    right: 50%;
+    top: 50%;
+    transform: translateY(-100%) translateX(65%);
+    background-color: var(--blue);
+    border: 2px solid var(--red);
+}
+
 textarea {
     height: 25rem !important;
     outline: none;
@@ -41,7 +52,15 @@ textarea {
 
 /*Focus, Hover, Active*/
 textarea:focus {border-color: var(--blue);}
+button[type='submit']:is(:hover, :active, :focus, :focus-within) {background-color: var(--dark-blue);}
 
-@media (max-width: 575px) {
+/*Media Querys*/
+@media (max-width: 768px) {
     textarea {height: 10rem;}
+    button[type='submit'] {
+        border-radius: 0 !important;
+        position: static !important;
+        width: 100%;
+        transform: translateY(0) translateX(0);
+    }
 }
