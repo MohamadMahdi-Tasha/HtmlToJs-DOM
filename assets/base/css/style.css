@@ -9,3 +9,18 @@
     --blue: #0F3460;
     --dark-blue: #16213E;
 }
+
+/*CSS RESET*/
+button {cursor: pointer;transition: .3s;}
+img {pointer-events: none}
+a {text-decoration: none !important}
+
+body {
+    overflow-x: hidden;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Poppins', "Roboto Light", 'Verdana' ,sans-serif;
+    background-color: var(--red) !important;
+}
+
+/*Style*/
