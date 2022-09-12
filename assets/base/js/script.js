@@ -3,10 +3,10 @@
 const htmlInput = document.getElementById('html-input');
 const jsInput = document.getElementById('JS-input');
 const submitButton = document.querySelector('button[type="submit"]');
-const tagsInText = [];
 
 submitButton.addEventListener('click', (event) => {
     event.preventDefault();
+    const tagsInText = [];
 
     const string = htmlInput.value;
     const formattedStr = string.match(/<[a-zA-Z]>(.*?)<\/[a-zA-Z]>/g)
@@ -16,9 +16,10 @@ submitButton.addEventListener('click', (event) => {
         tagsInText.push(item.slice(1, tagNameEnd));
     })
 
-
     tagsInText.forEach(item => {
-        jsInput.textContent = `document.createElement(${item})`
-        console.log(item)
+        const newCodeElement = document.createElement('code');
+        newCodeElement.textContent = `const Item = document.createElement(${item});`
+        jsInput.firstElementChild.appendChild(newCodeElement)
+        hljs.highlightElement(newCodeElement)
     })
 })

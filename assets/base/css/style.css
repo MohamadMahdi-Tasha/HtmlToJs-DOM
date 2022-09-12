@@ -15,6 +15,7 @@
 button {cursor: pointer;transition: .3s;}
 img {pointer-events: none}
 a {text-decoration: none !important}
+code {display: block !important;padding: 0 !important;background-color: transparent !important;}
 
 body {
     overflow-x: hidden;
@@ -27,8 +28,10 @@ body {
 /*Style*/
 #js-input {user-select: all;}
 h1 {text-shadow: 5px 0 0 rgb(0,0,0)}
-textarea::-webkit-scrollbar {background-color: var(--dark-blue);border-radius: 50rem}
-textarea::-webkit-scrollbar-thumb {background-color: var(--purple);border-radius: 50rem}
+textarea::-webkit-scrollbar, #JS-input::-webkit-scrollbar {background-color: var(--dark-blue);cursor: pointer !important }
+textarea::-webkit-scrollbar-thumb, #JS-input::-webkit-scrollbar-thumb {background-color: var(--purple);}
+#JS-input {background-color: var(--dark-blue);}
+textarea {background-color: #fff;}
 
 button[type='submit'] {
     width: 50px;
@@ -43,7 +46,6 @@ button[type='submit'] {
 textarea, #JS-input {
     height: 25rem !important;
     outline: none;
-    background-color: white;
     border: 5px solid transparent;
     box-shadow: var(--shadow);
     transition: .3s;
