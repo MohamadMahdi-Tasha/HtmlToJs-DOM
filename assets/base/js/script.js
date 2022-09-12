@@ -9,7 +9,7 @@ submitButton.addEventListener('click', (event) => {
     const tagsInText = [];
 
     const string = htmlInput.value;
-    const formattedStr = string.match(/<[a-zA-Z]>(.*?)<\/[a-zA-Z]>/g)
+    const formattedStr = string.match(/<[a-zA-Z].*?>(.*?)<\/[a-zA-Z].*?>/g)
 
     formattedStr.forEach(item => {
         const tagNameEnd = item.indexOf('>')
@@ -18,7 +18,7 @@ submitButton.addEventListener('click', (event) => {
 
     tagsInText.forEach(item => {
         const newCodeElement = document.createElement('code');
-        newCodeElement.textContent = `const Item = document.createElement(${item});`
+        newCodeElement.textContent = `const Item = document.createElement('${item}');`
         jsInput.firstElementChild.appendChild(newCodeElement)
         hljs.highlightElement(newCodeElement)
     })

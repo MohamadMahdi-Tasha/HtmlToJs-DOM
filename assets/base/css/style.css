@@ -15,7 +15,7 @@
 button {cursor: pointer;transition: .3s;}
 img {pointer-events: none}
 a {text-decoration: none !important}
-code {display: block !important;padding: 0 !important;background-color: transparent !important;}
+code {display: block !important;padding: 0 !important;background-color: transparent !important;user-select: all}
 
 body {
     overflow-x: hidden;
