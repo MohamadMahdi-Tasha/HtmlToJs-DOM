@@ -9,7 +9,9 @@ submitButton.addEventListener('click', (event) => {
     const tagsInText = [];
 
     const string = htmlInput.value;
-    const formattedStr = string.match(/<[a-zA-Z].*?>(.*?)<\/[a-zA-Z].*?>/g)
+    const inline = /<[a-zA-Z].*?>(.*?)<\/[a-zA-Z].*?>/g
+    const notInline = /<[a-zA-Z].*?>\n(.*?)\n<\/[a-zA-Z].*?>
+    const formattedStr = string.match(inline) | string.match(notInline)
 
     formattedStr.forEach(item => {
         const tagNameEnd = item.indexOf('>')
